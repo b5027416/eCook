@@ -1,0 +1,24 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title> Review App - report</title>
+
+</head>
+<body> 
+<h1> Reviews</h1>
+
+{% for reviews in reviews %} 
+
+<h3> {{reviews.author}} on {{reviews.date}}</h3> 
+
+<h4> {{reviews.rating}}</h4>
+
+<p> Review Comments: {{reviews.review}}</p>
+
+<hr>
+{% endfor %}
+
+ 
+</body>
+</html>
+
