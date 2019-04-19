@@ -1,24 +1,30 @@
-<! DOCTYPE html>
-<html>
-<head>
-<title> Review App - report</title>
+{%extends "reviewApp/base.html"%} 
 
-</head>
-<body> 
+{%block content %}
+
 <h1> Reviews</h1>
 
 {% for reviews in reviews %} 
 
-<h3> {{reviews.author}} on {{reviews.date}}</h3> 
+<article class="media content-section">
 
-<h4> {{reviews.rating}}</h4>
+  <div class="media-body">
 
-<p> Review Comments: {{reviews.review}}</p>
+    <div class="article-metadata">
 
-<hr>
+      <a class="mr-2" href="#">{{ Author}} ({{Date}})</a>
+
+      <small class="text-muted">{{ Rating }}</small>
+
+    </div>
+
+
+    <p class="article-content">{{ review }}</p>
+
+  </div>
+
+</article>
 {% endfor %}
+{% endblock content %} 
 
- 
-</body>
-</html>
 
