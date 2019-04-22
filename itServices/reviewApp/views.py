@@ -1,13 +1,6 @@
 from django.shortcuts import render
+from .models import Review 
 
-reviews = [
-{
-'author' : 'Emma Cook',
-'rating' : '4 stars',
-'review' : 'fantastic product, would recommend',
-'date' : '19/04/2019'
-}
-]
 
 def home(request):
 	return render(request,'reviewApp/home.html', {'title':'Home'})
@@ -23,9 +16,9 @@ def about(request):
 
 def report(request):
 	daily_report={
-	'reviews': reviews
+	'review': Review.objects.all()
 	}
-	return render(request, 'reviewApp/report.html', {'title':'Report'}, daily_report)
+	return render(request, 'reviewApp/report.html', {'title':'Review'}, daily_report)
 
 
 # Create your views here.
