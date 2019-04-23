@@ -10,7 +10,7 @@ path('about', views.about, name='reviewApp-about'),
 path('register',user_views.register, name='register'),
 path('profile', user_views.profile, name='profile'),
 path('contact',views.contact, name='reviewApp-contact'),
-##path('reviews',views.reviews, name='reviewApp-reviews'),
+path('product',views.product, name='reviewApp-product'),
 path('report',views.report, name='reviewApp-report'),
 
 ]

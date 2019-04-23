@@ -20,5 +20,7 @@ def report(request):
 	}
 	return render(request, 'reviewApp/report.html', {'title':'Review'}, daily_report)
 
+def product(request):
+	return render(request, 'reviewApp/product.html', {'title':'Products'})
 
 # Create your views here.
